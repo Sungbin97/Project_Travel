@@ -1,3 +1,4 @@
+/*
 package com.green4.travuler.controller;
 
 import org.springframework.web.bind.annotation.*;
@@ -13,3 +14,4 @@ public class TravelPlanController {
         return "연결테스트";
     }
 }
+*/

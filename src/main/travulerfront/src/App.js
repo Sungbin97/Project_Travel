@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Route, Routes, Switch } from "react-router-dom";
 import axios from "axios";
-import NewTravel from "./components/NewTravel";
 import Main from "./components/Main";
+import TravlePlans from "./components/TravlePlans";
 
 function App() {
   const baseUrl = "http://localhost:8080";
@@ -20,14 +20,19 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className="App">
-      <header className="App-header">
-        <Routes>
-          <Route path="/" element={<Main />}></Route>
-          <Route path="/travuler/newTravel" element={<NewTravel />}></Route>
-        </Routes>
-      </header>
-    </div>
+      <div className="App">
+        <header className="App-header">
+          <Routes>
+            <Switch>
+              <Route exact path="/" element={<Main />}></Route>
+              <Route
+                path="/travuler/travlePlans"
+                element={<TravlePlans />}
+              ></Route>
+            </Switch>
+          </Routes>
+        </header>
+      </div>
     </BrowserRouter>
   );
 }

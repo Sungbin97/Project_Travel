@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Route, Routes, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import axios from "axios";
 import Main from "./components/Main";
 import TravlePlans from "./components/TravlePlans";
@@ -23,13 +23,11 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Routes>
-            <Switch>
-              <Route exact path="/" element={<Main />}></Route>
-              <Route
-                path="/travuler/travlePlans"
-                element={<TravlePlans />}
-              ></Route>
-            </Switch>
+            <Route exact path="/" element={<Main />}></Route>
+            <Route
+              path="/travuler/travlePlans"
+              element={<TravlePlans />}
+            ></Route>
           </Routes>
         </header>
       </div>

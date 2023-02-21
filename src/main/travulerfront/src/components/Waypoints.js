@@ -7,8 +7,8 @@ const Waypoints = () => {
     setWaypoint([...waypoint, { id: "waypoint" + waypoint.length }]);
   };
 
-  const removeWaypoint = (idToRemove) => {
-    setWaypoint(waypoint.filter((tag) => tag.id !== idToRemove));
+  const removeWaypoint = (id) => {
+    setWaypoint(waypoint.filter((tag) => tag.id !== id));
   };
   return (
     <>

@@ -2,12 +2,13 @@ import { useState } from "react";
 import Waypoints from "./Waypoints";
 import StartingPoint from "./StartingPoint";
 import EndPoint from "./EndPoint";
+import "../css/TravlePlans.css";
 
 const TravlePlans = () => {
   const day1 = "day 1";
   const [newSchedule, setNewSchedule] = useState([
-    <ul key={day1} id={day1}>
-      {day1}
+    <ul className="schedule-box" key={day1} id={day1}>
+      day 1
       <br />
       <StartingPoint />
       <Waypoints />
@@ -27,7 +28,7 @@ const TravlePlans = () => {
     <>
       <h1>여행 계획하기</h1>
       {newSchedule.map((schedule) => (
-        <ul key={schedule.id} id={schedule.id}>
+        <ul className="schedule-box" key={schedule.id} id={schedule.id}>
           {schedule.id}
           <br />
           <StartingPoint />

@@ -1,21 +1,17 @@
-import { useState } from "react";
+import React from 'react';
 
-const StartingPoint = () => {
-  const [startingPoint, setStartingPoint] = useState("");
-
-  const changeStartingPoint = (e) => {
-    setStartingPoint(e.target.value);
-  };
+const StartingPoint = ({ startingPoint, onChange }) => {
   return (
-    <>
-      출발:{" "}
+    <div>
+      <label htmlFor="startingPoint">출발지:</label>
       <input
         type="text"
-        placeholder="출발지를 입력해주세요."
-        onChange={changeStartingPoint}
+        id="startingPoint"
+        name="startingPoint"
         value={startingPoint}
+        onChange={onChange}
       />
-    </>
+    </div>
   );
 };
 

@@ -1,22 +1,17 @@
-import { useState } from "react";
+import React from 'react';
 
-const EndPoint = (props) => {
-  const [endPoint, setEndPoint] = useState("");
-
-  const addEndPoint = (e) => {
-    setEndPoint(e.target.value);
-  };
-
+const EndPoint = ({ endPoint, onChange }) => {
   return (
-    <>
-      도착:{" "}
+    <div>
+      <label htmlFor="endPoint">End Point:</label>
       <input
         type="text"
-        placeholder="도착지를 입력해주세요."
-        onChange={addEndPoint}
+        id="endPoint"
+        name="endPoint"
+        value={endPoint}
+        onChange={onChange}
       />
-      <button onClick={props.addNewSchedule}>일정 추가</button>
-    </>
+    </div>
   );
 };
 
